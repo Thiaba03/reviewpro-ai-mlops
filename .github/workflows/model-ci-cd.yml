@@ -119,7 +119,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v6.2.0
         with:
-          images: ghcr.io/${{ github.repository_owner }}/reviewpro-ai
+          images: ghcr.io/thiaba03/reviewpro-ai
           tags: |
             type=ref,event=tag
             type=raw,value=latest
