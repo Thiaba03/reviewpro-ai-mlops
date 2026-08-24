@@ -34,6 +34,15 @@ jobs:
       - name: Vérifier les fichiers Composer
         run: composer validate --no-check-publish
 
+      - name: Préparer les répertoires Laravel
+        run: |
+          mkdir -p bootstrap/cache
+          mkdir -p storage/framework/cache/data
+          mkdir -p storage/framework/sessions
+          mkdir -p storage/framework/views
+          mkdir -p storage/logs
+          chmod -R u+rwX bootstrap/cache storage
+
       - name: Installer les dépendances PHP
         run: |
           composer install \
