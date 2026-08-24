@@ -16,3 +16,4 @@ Route::get('/reviews/{review}', [ReviewController::class, 'show']); // Détail (
 Route::delete('/reviews/{review}', [ReviewController::class, 'destroy']); // Suppression (Nouveau)
 Route::get('/dashboard', [App\Http\Controllers\Api\DashboardController::class, 'index']);
 Route::post('/ai/predict', AiPredictionController::class);
+Route::get('/health', App\Http\Controllers\Api\ApplicationHealthController::class);
